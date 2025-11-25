@@ -12,6 +12,7 @@ cache/
 *.tmp
 
 dist/
+assets/
 assets/css/*.map
 assets/js/*.map
 
