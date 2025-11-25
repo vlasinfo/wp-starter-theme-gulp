@@ -1,4 +1,4 @@
-# Wordpress Starter Theme Gulp
+# Wordpress Starter Theme Gulp with HTML mode
 
 This ZIP contains a ready-to-use WordPress theme scaffold with:
 - Gulp build (Sass, JS, file includes)
