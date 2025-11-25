@@ -1,85 +1,98 @@
-# Wordpress Starter Theme Gulp
+# 🚀 WordPress Starter Theme with Gulp (HTML Mode Included)
 
-This ZIP contains a ready-to-use WordPress theme scaffold with:
-- Gulp build (Sass, JS, file includes)
-- Wordpress theme structure (core, blocks, CPTs, AJAX)
-- src/ for development assets
-- assets/ for compiled output
+A ready-to-use starter theme for WordPress that also supports a static HTML development mode.
+Perfect for building fast, modular, and scalable themes.
 
-## Quick start
+**Author:** Yurii Vlasenko-Lutskyi – [vlasinfo.com](https://vlasinfo.com/)
 
-1. ```shell
+This package includes:
+
+- ⚙️ Gulp build pipeline (Sass, JS bundling, HTML includes)
+
+- 🧩 WordPress theme structure (core setup, blocks, CPTs, AJAX)
+
+- 🗂️ src/ folder for development
+
+- 📦 assets/ folder for compiled output (CSS/JS/images/fonts)
+
+
+## 🔧 Quick Start
+
+1. Install dependencies
+ ```shell
    npm i
    ```
-2. ```shell
-   npm run dev   (for WP mode)
+2. Start development (WordPress mode)
+ ```shell
+   npm run dev
    ```
-3. ```shell
-   npm run dev:html (for static HTML dev)
+3. Start development (static HTML mode)
+ ```shell
+   npm run dev:html
    ```
 
-Drop this folder into `wp-content/themes/vlasinfo-theme` for WordPress.
+To use as a WordPress theme, place this folder into:
+ ```shell
+   wp-content/themes/vlasinfo-theme
+   ```
 
-## 📁 Folders and files structure
+## 📝 WordPress Installation Guide
+
+1. Make sure you have a local WordPress setup running (e.g., Local by Flywheel, XAMPP, MAMP).
+
+2. Copy the folder vi-theme to:
+   ```shell
+   wp-content/themes/
+   ```
+3. Activate the theme from the WordPress admin panel (Appearance → Themes).
+
+4. Start the Gulp watcher for development:   
+   ```shell
+   npm run dev
+   ```
+
+5. Your assets/ folder will be automatically compiled and updated with changes.   
+
+## 📁 Folder Structure Overview
 
 ```
-📁vi-theme/
+📁 vi-theme/
 │
-├── 📁src/
-│   │
-│   ├──📁fonts/
-│   │
-│   ├──📁html/        ← only used in HTML mode
-│   │  ├──📁partials/
-│   │  │   ├──📃footer.html
-│   │  │   ├──📃head.html
-│   │  │   └──📃header.html
-│   │  └──📃index.html
-│   │
-│   ├──📁scss/
-│   │  ├──📁base/
-│   │  │   ├──📃_buttons.scss
-│   │  │   ├──📃_cursor.scss
-│   │  │   ├──📃_fonts.scss
-│   │  │   ├──📃_reboot.scss
-│   │  │   └──📃_variables.scss
-│   │  ├──📁components/
-│   │  │   ├──📃_header.scss
-│   │  │   └──📃_footer.scss
-│   │  ├──📁mixins/
-│   │  │   ├──📃_breakpoints.scss
-│   │  │   ├──📃_includes.scss
-│   │  │   ├──📃_media-query.scss
-│   │  │   └──📃_rem.scss
-│   │  ├──📁woocommerce/
-│   │  │   └──📃_content-product.scss
-│   │  ├──📃main.scss
-│   │  └──📃vendors.scss
-│   │
-│   ├──📁js/
-│   │   ├──📁modules/
-│   │   │   └──📃menu.js
-│   │   └──📃main.js
-│   │
-│   ├──📁img/
-│   └──📁fonts/
+├── 📁 src/                  # Development source files
+│   ├── 📁 html/             # Static HTML mode (dev:html)
+│   │   ├── partials/
+│   │   └── index.html
+│   ├── 📁 scss/             # Sass files (base, components, mixins, WooCommerce)
+│   ├── 📁 js/               # JS files (modules + main)
+│   ├── 📁 img/
+│   └── 📁 fonts/
 │
-├──📁assets/          ← Compiled output (CSS, JS, images) — served by WordPress
-│  ├──📁css/
-│  ├──📁js/
-│  ├──📁img/
-│  └──📁fonts/
-│
-├──📁dist/            ← only used in HTML mode
-│
-├──📁template-parts/  ← WordPress partials
-│
-├──📃functions.php
-├──📃index.php
-├──📃header.php
-├──📃footer.php
-├──📃style.css
-├──📃gulpfile.js
-├──📃package.json
-└──📃.gitignore
+├── 📁 assets/               # Compiled output (CSS, JS, images, fonts)
+├── 📁 dist/                 # Static HTML build output (HTML mode)
+├── 📁 template-parts/       # WordPress template partials
+├── functions.php
+├── index.php
+├── header.php
+├── footer.php
+├── style.css                # WP theme metadata
+├── gulpfile.js
+├── package.json
+└── .gitignore
 ```
+
+## ⚙️ How it Works (Gulp Tasks)
+
+| Task               | Description                                                                        |
+| ------------------ | ---------------------------------------------------------------------------------- |
+| `npm run dev`      | Runs Gulp in **WordPress mode**, watches Sass/JS changes, and reloads the browser. |
+| `npm run dev:html` | Runs Gulp in **HTML mode**, compiles HTML includes, Sass, JS, and watches changes. |
+| `npm run build`    | Compiles and minifies all assets for production.                                   |
+| Sass               | Compiles `src/scss/**/*.scss` → `assets/css/`                                      |
+| JS                 | Bundles and minifies `src/js/**/*.js` → `assets/js/`                               |
+| Images             | Optimizes images from `src/img/` → `assets/img/`                                   |
+
+📸 Screenshots / Demo
+
+Theme in WordPress:
+
+HTML Mode:
