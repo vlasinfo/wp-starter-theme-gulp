@@ -22,6 +22,7 @@ Drop this folder into `wp-content/themes/vlasinfo-theme` for WordPress.
 
 ## 📁 Folders and files structure
 
+```
 📁vi-theme/
 │
 ├── 📁src/
@@ -81,3 +82,4 @@ Drop this folder into `wp-content/themes/vlasinfo-theme` for WordPress.
 ├──📃gulpfile.js
 ├──📃package.json
 └──📃.gitignore
+```
