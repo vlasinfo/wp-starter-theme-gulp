@@ -90,9 +90,3 @@ To use as a WordPress theme, place this folder into:
 | Sass               | Compiles `src/scss/**/*.scss` → `assets/css/`                                      |
 | JS                 | Bundles and minifies `src/js/**/*.js` → `assets/js/`                               |
 | Images             | Optimizes images from `src/img/` → `assets/img/`                                   |
-
-📸 Screenshots / Demo
-
-Theme in WordPress:
-
-HTML Mode:
