@@ -1,49 +1,8 @@
-// === nFont Family === //
-
 @font-face {
-  font-family: 'nFont';
-  src: url('../fonts/nfont-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'nFont';
-  src: url('../fonts/nfont-italic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'nFont';
-  src: url('../fonts/nfont-medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'nFont';
-  src: url('../fonts/nfont-bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'nFont';
-  src: url('../fonts/nfont-black.woff2') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'nFont Condensed';
-  src: url('../fonts/nfont-regular-cond.woff2') format('woff2');
-  font-weight: 400;
+  font-family: 'Helvetica Neue Roman';
+  src: url('fonts/HelveticaNeueRoman.woff2') format('woff2'),
+       url('fonts/HelveticaNeueRoman.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
