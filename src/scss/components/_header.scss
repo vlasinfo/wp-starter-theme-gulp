@@ -1,3 +1,107 @@
 @use "mixins/rem" as * ;
 @use "mixins/includes" as * ;
 @use "mixins/media-query" as * ;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(24px) rem(32px);
+  }
+
+  &__logo-link {
+    font-size: rem(24px);
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  &__nav {
+    .nav__list {
+      display: flex;
+      gap: rem(32px);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav__link {
+      font-family: var(--font-secondary);
+      font-size: rem(20px);
+      color: var(--color-text);
+      text-decoration: none;
+      transition: color var(--transition);
+
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: rem(16px);
+
+    .header__icon {
+      font-size: rem(20px);
+      transition: transform var(--transition), color var(--transition);
+
+      &:hover {
+        color: var(--color-accent);
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    span {
+      width: 26px;
+      height: 3px;
+      background: var(--color-text);
+      border-radius: rem(2px);
+      transition: background var(--transition);
+    }
+  }
+}
+
+// --- MOBILE NAV ---
+@media (max-width: 768px) {
+  .header__nav { 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    transform: translateY(-120%);
+    padding: rem(20px) 0;
+    transition: transform 0.45s ease;
+
+    .nav__list {
+      flex-direction: column;
+      gap: rem(16px);
+    }
+  }
+
+  .header__nav.active {
+    transform: translateY(0);
+  }
+
+  .header__burger {
+    display: flex;
+  }
+}

@@ -24,7 +24,7 @@ const assetsDest = mode === 'html' ? 'dist/assets/' : 'assets/';
 const paths = {
   styles:  { src: 'src/scss/**/*.scss', main: 'src/scss/main.scss', dest: `${assetsDest}css/` },
   scripts: { src: 'src/js/**/*.js', entry: 'src/js/main.js', dest: `${assetsDest}js/` },
-  images:  { src: 'src/img/**/*.{jpg,jpeg,png,svg,gif,webp,ico}', dest: `${assetsDest}img/` },
+  images:  { src: 'src/img/**/*.{jpg,jpeg,png,svg,gif,avif,webp,ico}', dest: `${assetsDest}img/` },
   fonts:   { src: 'src/fonts/**/*', dest: `${assetsDest}fonts/` },
   html:    { src: 'src/html/*.html', watch: 'src/html/**/*.html', dest: 'dist/' },
   vendors: {
@@ -36,6 +36,7 @@ const paths = {
       'node_modules/gsap/dist/gsap.js',
       'node_modules/gsap/dist/ScrollTrigger.min.js',
       'node_modules/gsap/dist/CustomEase.min.js',
+      'node_modules/gsap/dist/ScrollToPlugin.min.js',
       'node_modules/pace-js/pace.min.js'
     ]
   }
